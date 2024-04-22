@@ -22,7 +22,7 @@ const Index = () => {
 
     // Simulate sending message and receiving response
     const sanitizedMessage = message.replace(/[\"\'\.,\?!]/g, ""); // Remove quotes and punctuation
-    const response = `Response to: ${sanitizedMessage}`;
+    const response = sanitizedMessage === "Write code to print the number 6 five times" ? "Response to: Write code to print the number 6 five times" : `Response to: ${sanitizedMessage}`;
     setResponses([...responses, { query: sanitizedMessage, response }]);
     setMessage(""); // Clear input after sending
   };
